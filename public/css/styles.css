@@ -1,0 +1,22 @@
+:root {
+    /* color palettes */
+    /* https://colorhunt.co/ */
+}
+
+* {
+    /* border: .1px solid black; */
+}
+
+
+/* ---------- Main ---------- */
+main {
+    height: 100vh;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    justify-content: space-around;
+}
+
