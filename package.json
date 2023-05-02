@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "seed": "node seeds/seed.js"
+    "seed": "node seeds/seed.js",
+    "dev": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
@@ -16,9 +17,9 @@
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
     "mysql2": "^2.2.5",
+    "nodemon": "^2.0.22",
     "sequelize": "^6.3.5"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Cjmoye30/Dream_Catcher.git"
