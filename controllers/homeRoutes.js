@@ -8,11 +8,15 @@ router.get('/', async (req, res) => {
 // GET request for login page
 router.get('/login', async (req, res) => {
   res.render('loginpage');
+});
+
+// GET request for the signup page
+router.get('/signup', async (req, res) => {
+  res.render('signup');
 })
 
 // GET request for Journal Page
-router.get('/', async (req, res) => {
-
+router.get('/journal', async (req, res) => {
   res.render('journalpage');
 });
 
