@@ -1,4 +1,23 @@
 {{!-- Journal Page --}}
+<body>
 <div>
     <h1>Journal Page</h1>
+     <h3>Welcome, {{session.name}}!</h3>
 </div>
+
+ <form id="dreamForm">
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+        
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" rows="4" cols="50" required></textarea>
+        
+        <button type="submit">Submit Journal</button>
+    </form>
+
+    <button id="interpretBtn">Interpret</button>
+    <div id="interpretation"></div>
+
+    <script src="/js/journal.js"></script>
+
+</body>

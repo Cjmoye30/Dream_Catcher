@@ -1,4 +1,31 @@
 {{!-- Login Page --}}
 <div>
-    <h1>login page</h1>
+    <h1>Login page</h1>
+    <div class="container">
+        <h2>Login</h2>
+
+        <form id="login-form">
+
+            {{!-- get user email by id --}}
+            <div class="form-group">
+                <label for="email-login">email:</label>
+                <input class="form-input" type="text" id="email-login" />
+            </div>
+
+            {{!-- get user password by id --}}
+            <div class="form-group">
+                <label for="password-login">password:</label>
+                <input class="form-input" type="password" id="password-login" />
+            </div>
+
+            {{!-- submit and send info --}}
+            <div class="form-group">
+                <button id="submit-btn" class="btn btn-primary" type="submit">Submit</button>
+            </div>
+        </form>
+
+    </div>
+    <div class="col-md-6">
+    </div>
+
 </div>
