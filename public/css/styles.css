@@ -42,7 +42,7 @@ footer {
     bottom: 0;
 }
 
-.randomDreamFact{
+.randomDreamFact, #interpretation{
   color: olive; 
   font-family: "Courier";
   font-size: 20px;
