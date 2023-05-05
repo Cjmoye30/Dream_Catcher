@@ -33,15 +33,18 @@
       {{!-- Navigation Links --}}
 
       <div class="nav-links">
+      {{#if session.logged_in}}
         <a class="nav-item nav-link" href="/">Home</a>
         <a class="nav-item nav-link" href="/journal">Journal</a>
         <p class="nav-item nav-link logout">Logout</p>
-      </div>
 
-      <div class="nav-links">
+      {{else}}
         <a class="nav-item nav-link" href="/signup">Signup</a>
         <a class="nav-item nav-link" href="/login">Login</a>
+
+      {{/if}}
       </div>
+
 
     </nav>
   </header>
@@ -63,10 +66,10 @@
   {{!-- JS File --}}
   <script src="/js/login.js"></script>
 
-    {{#if session.logged_in}}
+  {{#if session.logged_in}}
   <script type="text/javascript" src="/js/logout.js"></script>
   {{/if}}
-  
+
 </body>
 
 </html>

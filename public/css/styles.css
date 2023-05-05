@@ -42,3 +42,17 @@ footer {
     bottom: 0;
 }
 
+.randomDreamFact{
+  color: olive; 
+  font-family: "Courier";
+  font-size: 20px;
+  margin: 10px 0 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  animation: type 5s steps(60, end); 
+}
+
+@keyframes type{ 
+  from { width: 0; } 
+}
