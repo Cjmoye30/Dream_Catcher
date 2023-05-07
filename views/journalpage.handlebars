@@ -1,15 +1,37 @@
 {{!-- Journal Page --}}
 <div>
     <h3>Welcome, {{session.name}}!</h3>
+
 </div>
 
-<form id="dreamForm">
-    <label for="subject">Subject:</label>
-    <input type="text" id="subject" name="subject" required>
-    <label for="description">Description:</label>
-    <textarea id="description" name="description" rows="4" cols="50" required></textarea>
-    <button type="submit">Submit Journal</button>
-</form>
-<button id="interpretBtn">Interpret</button>
-<div id="interpretation"></div>
+<div class="row journal-container">
+    <div class="col col-lg-8 dreamEntry">
+        <form id="dreamForm">
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="4" cols="50" required></textarea>
+            <button id="submitDreamBtn" type="submit">Submit Journal</button>
+
+        </form>
+
+        <button id="interpretBtn">Interpret</button>
+        <div id="interpretation">test interpretation here</div>
+    </div>
+    <div class="col col-lg-4 allDreams">
+        <h1>Your past dreams:</h1>
+
+        {{#each dreamArr}}
+        <div class="previousDreams">
+            <div class="dreamSubject"> {{subject}} </div>
+            <div class="dreamDescription"> {{description}} </div>
+            <div class="dreamInterpretation"> {{interpretation}} </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+
+
+
 <script src="/js/journal.js"></script>

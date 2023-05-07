@@ -1,11 +1,8 @@
 const express = require('express');
 const { interpretDream } = require('../public/js/openAI'); // Import the correct function name
+const { User, Dreams } = require('../models')
 
 const router = express.Router();
-
-router.get('/', async (req, res) => {
-    res.render('journalpage');
-});
 
 router.post('/api/interpret-dream', async (req, res) => {
     const { description } = req.body;
@@ -20,5 +17,29 @@ router.post('/api/interpret-dream', async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 });
+
+router.post('/api/submit-dream', async (req, res) => {
+
+    try {
+
+
+        const newDream = await Dreams.create({
+            subject: req.body.subject,
+            description: req.body.description,
+            interpretation: req.body.interpretation,
+            user_id: req.session.user_id
+        })
+
+        console.log(newDream);
+
+        res.json({
+            success: true,
+            message: 'New dream created!'
+        });
+
+    } catch (err) {
+        res.status(500).json(err)
+    }
+})
 
 module.exports = router;
