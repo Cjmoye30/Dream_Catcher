@@ -18,19 +18,16 @@ router.post('/api/interpret-dream', async (req, res) => {
     }
 });
 
+// Add a dream to the DB
 router.post('/api/submit-dream', async (req, res) => {
 
     try {
-
-
         const newDream = await Dreams.create({
             subject: req.body.subject,
             description: req.body.description,
             interpretation: req.body.interpretation,
             user_id: req.session.user_id
         })
-
-        console.log(newDream);
 
         res.json({
             success: true,
@@ -40,6 +37,26 @@ router.post('/api/submit-dream', async (req, res) => {
     } catch (err) {
         res.status(500).json(err)
     }
-})
+});
+
+// Delete a dream from the table
+router.delete('/api/delete-dream/:id', async (req, res) => {
+    try {
+        const dreamData = await Dreams.destroy({
+          where: {
+            id: req.params.id,
+          },
+        });
+    
+        if (!dreamData) {
+          res.status(404).json({ message: 'No dream found with this id!' });
+          return;
+        }
+    
+        res.status(200).json(dreamData);
+      } catch (err) {
+        res.status(500).json(err);
+      }
+});
 
 module.exports = router;

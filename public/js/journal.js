@@ -33,19 +33,16 @@ document.getElementById('interpretBtn').addEventListener('click', async () => {
     document.getElementById('interpretation').innerHTML = interpretation;
 });
 
-// On "Submit Journal" click, send a response to the post route to create the new dream entry from the fields on the page
+// Event listener for dream submit button
 $("#submitDreamBtn").on("click", async (e) => {
-    console.log("Submit journal button clicked.");
-
     // Object for the data used to send to the dreams table (subject, description, interpretation)
-    // user_id will be added during the post through the session.user_id
     const dreamObj = {
         subject: $("#subject").val(),
         description: $("#description").val(),
         interpretation: $("#interpretation").text()
     };
-    console.log(dreamObj);
 
+    // Send a POST request to the correct route to get the dream added
     const response = await fetch('/journal/api/submit-dream', {
         method: "POST",
         body: JSON.stringify(dreamObj),
@@ -54,13 +51,32 @@ $("#submitDreamBtn").on("click", async (e) => {
         }
     });
 
-    console.log(response);
-
+    // If the response is good, show confirmation and log the dream
     const responseData = await response.json();
-    if(response.success) {
-        alert("Your dream has been logged - we can replace this with something better - maybe a modal as a confirmation")
+    if (responseData.success) {
+        alert("Your dream has been logged - we can replace this with something better - maybe a modal as a confirmation");
+        // reload the page to display the new dream on the page
+        window.location.reload()
+    } else {
+        alert("Something went wrong.")
     }
+});
 
-    // reload the page to display the new dream on the page
+// Event listener for delete button
+$(".delete-button").on("click", async (e) => {
+    // Button id corresponds to the id of the dream to easily delete it
+    const dreamId = e.target.id;
+
+    // fetch request to delete
+    const response = await fetch(`/journal/api/delete-dream/${dreamId}`, {
+        method: "DELETE",
+    });
+
+    // Reload page on success to remove it from the page
+    if (response.ok) {
+        window.location.reload();
+    } else {
+        console.log("Something went wrong")
+    }
 
 })

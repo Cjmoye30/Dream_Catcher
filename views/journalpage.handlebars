@@ -24,10 +24,14 @@
 
         {{#each dreamArr}}
         <div class="previousDreams">
-            <div class="dreamSubject"> {{subject}} </div>
-            <div class="dreamDescription"> {{description}} </div>
-            <div class="dreamInterpretation"> {{interpretation}} </div>
+            <h6> {{subject}} </h6>
+            <p>{{description}}</p>
+            <p>{{interpretation}}</p>
         </div>
+        {{!-- delete button id = id of the dream it is attached to so we can easily delete from the table --}}
+        <i id="{{id}}" class='fas fa-trash delete-button' style='font-size:16px'></i>
+
+        {{!-- add a delete button and function --}}
         {{/each}}
     </div>
 </div>

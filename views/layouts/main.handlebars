@@ -13,6 +13,9 @@
   <link rel="stylesheet" href="/css/jass.css">
   <link rel="stylesheet" href="/css/styles.css">
 
+  {{!-- Font Awesome for button icons --}}
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
   {{!-- JQuery --}}
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
@@ -33,16 +36,16 @@
       {{!-- Navigation Links --}}
 
       <div class="nav-links">
-      {{#if session.logged_in}}
+        {{#if session.logged_in}}
         <a class="nav-item nav-link" href="/">Home</a>
         <a class="nav-item nav-link" href="/journal">Journal</a>
         <p class="nav-item nav-link logout">Logout</p>
 
-      {{else}}
+        {{else}}
         <a class="nav-item nav-link" href="/signup">Signup</a>
         <a class="nav-item nav-link" href="/login">Login</a>
 
-      {{/if}}
+        {{/if}}
       </div>
 
 
