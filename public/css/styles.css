@@ -1,23 +1,27 @@
 /* :root {
     color palettes */
-    /* https://colorhunt.co/
-} */
-
-* {
-    border: .1px solid black;
+/* https://colorhunt.co/
 }
-
 
 /* ---------- Main ---------- */
 main {
     min-height: 100vh;
+    color: white
+}
+
+* {
+    /* border: .1px solid white; */
 }
 
 .homepage-content {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
-    height: 100vh;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    max-width: 95%;
 }
 
 .homepage-row {
@@ -31,28 +35,156 @@ main {
     justify-content: center;
 }
 
+.fixed-title {
+    position: fixed;
+    top: -60%;
+    left: 50%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 300%;
+    font-weight: 650;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    letter-spacing: 1.2px;
+}
+
+.navbar {
+    background: linear-gradient(180deg, rgba(74, 54, 177, 0.5), rgba(199, 100, 236, 0.6));
+}
+
+
+.navbar-brand-white {
+    color: white;
+    font-weight: 600;
+}
+
+.navbar-brand {
+    margin-left: 15px;
+}
+
 .nav-links {
     display: flex;
     flex-direction: row;
-    width: 40%;
+    width: 50%;
     justify-content: space-around;
+    color: white;
+    margin-bottom: .5%;
+}
+
+.nav-item {
+    color: white;
+    margin-top: 3%;
+    font-weight: 600;
+    font-size: 17px;
+    transition: all 0.3s ease;
+}
+
+.nav-item:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+@keyframes move {
+    0% {
+        background-size: 100% 100%;
+    }
+
+    100% {
+        background-size: 150% 150%;
+    }
+}
+
+
+
+
+
+.space-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/spaceImg.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    animation: move 20s linear infinite;
+    z-index: -1;
 }
 
 footer {
     bottom: 0;
+    color: white;
 }
 
-.randomDreamFact, #interpretation{
-  color: olive; 
-  font-family: "Courier";
-  font-size: 20px;
-  margin: 10px 0 0 10px;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 100%;
-  animation: type 5s steps(60, end); 
+.fact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    bottom: 50%;
 }
 
-@keyframes type{ 
-  from { width: 0; } 
+.fact-text-wrapper {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding-right: 210%;
+}
+
+.fact-text {
+    display: inline;
+    white-space: nowrap;
+    font-family: "Courier";
+    font-size: 18px;
+    color: white;
+}
+
+.callToAction {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50%;
+}
+
+.signUpButton,
+.loginButton {
+    border-radius: 5px;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 10px 20px;
+    background-color: rgba(74, 54, 177, 0.5);
+    transition: all 0.3s ease-in-out;
+    border: none;
+    white-space: nowrap;
+}
+
+.loginButton {
+    background-color: rgba(199, 100, 236, 0.6);
+}
+
+.signUpButton:hover {
+    transform: scale(0.95);
+    background-color: rgba(74, 54, 177, 1);
+}
+
+.loginButton:hover {
+    transform: scale(0.95);
+    background-color: rgba(199, 100, 236, 1);
+}
+
+.submit-btn {
+    border-radius: 5px;
+    color: #fff;
+    font-size: 17px;
+    padding: 10px 20px;
+    font-weight: 500;
+    background-color: rgba(199, 100, 236, 0.6);
+    transition: all 0.3s ease-in-out;
+    border: none;
+    white-space: nowrap;
+}
+.submit-btn:hover {
+    transform: scale(0.95);
+    background-color: rgba(74, 54, 177, 1);
 }

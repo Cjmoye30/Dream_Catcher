@@ -3,7 +3,8 @@ const axios = require('axios');
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 const client = axios.create({
     baseURL: 'https://api.openai.com/v1/engines/text-davinci-003/completions',
-    headers: { 'Authorization': 'Bearer ' + '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' }
+    headers: { 'Authorization': 'Bearer ' + OPENAI_API_KEY }
+
 });
 
 async function interpretDream(description) {

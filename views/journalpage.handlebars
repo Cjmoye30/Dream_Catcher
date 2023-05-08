@@ -1,21 +1,39 @@
 {{!-- Journal Page --}}
 <div>
-<<<<<<< HEAD
-    <h1>Journal</h1>
-</div>
-{{!-- Step 1: create layout with mock data, general layout, create columns with journal enteries, form that lets you edit one, Step 2: wiring up to data}}
-=======
+
     <h3>Welcome, {{session.name}}!</h3>
+
 </div>
 
-<form id="dreamForm">
-    <label for="subject">Subject:</label>
-    <input type="text" id="subject" name="subject" required>
-    <label for="description">Description:</label>
-    <textarea id="description" name="description" rows="4" cols="50" required></textarea>
-    <button type="submit">Submit Journal</button>
-</form>
-<button id="interpretBtn">Interpret</button>
-<div id="interpretation"></div>
+<div class="row journal-container">
+    <div class="col col-lg-8 dreamEntry">
+        <form id="dreamForm">
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="4" cols="50" required></textarea>
+            <button id="submitDreamBtn" type="submit">Submit Journal</button>
+
+        </form>
+
+        <button id="interpretBtn">Interpret</button>
+        <div id="interpretation">test interpretation here</div>
+    </div>
+    <div class="col col-lg-4 allDreams">
+        <h1>Your past dreams:</h1>
+
+        {{#each dreamArr}}
+        <div class="previousDreams">
+            <h6> {{subject}} </h6>
+            <p>{{description}}</p>
+            <p>{{interpretation}}</p>
+        </div>
+        {{!-- delete button id = id of the dream it is attached to so we can easily delete from the table --}}
+        <i id="{{id}}" class='fas fa-trash delete-button' style='font-size:16px'></i>
+        {{/each}}
+    </div>
+</div>
+
+
 <script src="/js/journal.js"></script>
->>>>>>> 1344b0d8c169722ff18815f6c6049be3cbb37f92
