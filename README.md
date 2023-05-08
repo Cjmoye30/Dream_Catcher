@@ -9,7 +9,7 @@ As your first opportunity to show employers your collaborative skills and coding
 ```md
 AS A dreamer who wants to know more about my dreams
 I WANT a website that utilizes chatGPT to render meanings behind my dreams
-SO THAT I can better understand my subconscious in my sleep.
+SO THAT I can better understand my subconscious when I wake up.
 ```
 
 ## Project Requirements
@@ -47,7 +47,7 @@ You and your group will use everything you’ve learned over the past six module
 ## Authors
 - Weston Baker - Github
 - Cambric Moye - Github - Cjmoye30
-- Simon Horrabin - Github - 
+- Simon Horrabin - Github - simonhorrabin
 - Cole Goddard - Github - CGoddard1
 - UNCC Project Design
 
