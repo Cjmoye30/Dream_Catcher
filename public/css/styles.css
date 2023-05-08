@@ -1,16 +1,34 @@
-:root {
-    /* color palettes */
-    /* https://colorhunt.co/ */
-}
+/* :root {
+    color palettes */
+    /* https://colorhunt.co/
+} */
 
 * {
-    /* border: .1px solid black; */
+    border: .1px solid black;
 }
 
 
 /* ---------- Main ---------- */
 main {
+    min-height: 100vh;
+}
+
+.homepage-content {
+    display: flex;
     height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.homepage-row {
+    width: 100%;
+}
+
+.homepage-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .nav-links {
@@ -20,3 +38,21 @@ main {
     justify-content: space-around;
 }
 
+footer {
+    bottom: 0;
+}
+
+.randomDreamFact, #interpretation{
+  color: olive; 
+  font-family: "Courier";
+  font-size: 20px;
+  margin: 10px 0 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  animation: type 5s steps(60, end); 
+}
+
+@keyframes type{ 
+  from { width: 0; } 
+}

@@ -1,5 +1,21 @@
 {{!-- Journal Page --}}
 <div>
+<<<<<<< HEAD
     <h1>Journal</h1>
 </div>
 {{!-- Step 1: create layout with mock data, general layout, create columns with journal enteries, form that lets you edit one, Step 2: wiring up to data}}
+=======
+    <h3>Welcome, {{session.name}}!</h3>
+</div>
+
+<form id="dreamForm">
+    <label for="subject">Subject:</label>
+    <input type="text" id="subject" name="subject" required>
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" rows="4" cols="50" required></textarea>
+    <button type="submit">Submit Journal</button>
+</form>
+<button id="interpretBtn">Interpret</button>
+<div id="interpretation"></div>
+<script src="/js/journal.js"></script>
+>>>>>>> 1344b0d8c169722ff18815f6c6049be3cbb37f92
