@@ -2,7 +2,6 @@ const router = require('express').Router();
 const { User } = require('../../models');
 const bcrypt = require('bcrypt');
 
-// post request for login - taking the req.body after the user clicks the login button and making sure those credentails are in our system. If everything is true, then the user is logged in and we can use their req.session.id across the rest of the website
 router.post('/login', async (req, res) => {
 
     try {
