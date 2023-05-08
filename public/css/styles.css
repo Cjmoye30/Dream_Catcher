@@ -10,7 +10,7 @@ main {
 }
 
 * {
-    border: .1px solid white;
+    /* border: .1px solid white; */
 }
 
 .homepage-content {
@@ -171,4 +171,20 @@ footer {
 .loginButton:hover {
     transform: scale(0.95);
     background-color: rgba(199, 100, 236, 1);
+}
+
+.submit-btn {
+    border-radius: 5px;
+    color: #fff;
+    font-size: 17px;
+    padding: 10px 20px;
+    font-weight: 500;
+    background-color: rgba(199, 100, 236, 0.6);
+    transition: all 0.3s ease-in-out;
+    border: none;
+    white-space: nowrap;
+}
+.submit-btn:hover {
+    transform: scale(0.95);
+    background-color: rgba(74, 54, 177, 1);
 }
