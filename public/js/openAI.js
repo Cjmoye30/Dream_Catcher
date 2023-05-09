@@ -11,7 +11,7 @@ async function interpretDream(description) {
     const prompt = `Interpret the following dream experience: ${description}`;
     const params = {
         prompt: prompt,
-        max_tokens: 20
+        max_tokens: 100
         // n: 1,
         // stop: null,
         // temperature: 0.5
