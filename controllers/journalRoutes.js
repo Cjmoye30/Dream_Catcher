@@ -5,6 +5,7 @@ const { User, Dreams } = require('../models')
 const router = express.Router();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 router.get('/', async (req, res) => {
 <<<<<<< HEAD
     //figure out the current user (get this from the req.session, to do this we need to add user ID to req.session login (in example code that Jack pushed))
@@ -22,6 +23,8 @@ module.exports = router;
 
 =======
 >>>>>>> d797c1bd01a0620acdf20451b101b9b59d904b94
+=======
+>>>>>>> 87e99c4b1717e626c0df57ce356606f9082f655a
 router.post('/api/interpret-dream', async (req, res) => {
     const { description } = req.body;
     console.log('Description:', description);
@@ -37,9 +40,12 @@ router.post('/api/interpret-dream', async (req, res) => {
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = router;
 >>>>>>> 1344b0d8c169722ff18815f6c6049be3cbb37f92
 =======
+=======
+>>>>>>> 87e99c4b1717e626c0df57ce356606f9082f655a
 // Add a dream to the DB
 router.post('/api/submit-dream', async (req, res) => {
 
@@ -82,4 +88,8 @@ router.delete('/api/delete-dream/:id', async (req, res) => {
 });
 
 module.exports = router;
+<<<<<<< HEAD
 >>>>>>> d797c1bd01a0620acdf20451b101b9b59d904b94
+=======
+
+>>>>>>> 87e99c4b1717e626c0df57ce356606f9082f655a
