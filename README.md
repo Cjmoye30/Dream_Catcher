@@ -1,8 +1,6 @@
-# 16 Project 2: Interactive Full-Stack Application
+# DreamerGPT
 
-Projects play a key role in your journey to becoming a full-stack web developer. As you enter the last phase of the boot camp, you’ll begin to apply for development jobs. If you want to land interviews, your portfolio must feature high-quality deployed examples of your work—-and you can use your finished projects for that very purpose.
-
-As your first opportunity to show employers your collaborative skills and coding abilities, this particular project will be a focal point of your portfolio. Employers want to see what you can do, but they also want to see how you work with other developers. The more examples of deployed collaborative work you have in your portfolio, the more likely you are to get an interview and a job.
+"Our mission is to provide a comprehensive and insightful platform for individuals to explore and understand their dreams. Through the use of expert analysis and guidance, we aim to empower our users with the knowledge and tools needed to unlock the hidden meanings and symbolism within their dreams, allowing them to gain a deeper understanding of their subconscious mind and facilitate personal growth and development."
 
 ## User Story
 
@@ -45,7 +43,7 @@ You and your group will use everything you’ve learned over the past six module
 * Have a professional README (with unique name, description, technologies used, screenshot, and link to deployed application).
 
 ## Authors
-- Weston Baker - Github
+- Weston Baker - Github - WesBaker0
 - Cambric Moye - Github - Cjmoye30
 - Simon Horrabin - Github - simonhorrabin
 - Cole Goddard - Github - CGoddard1
