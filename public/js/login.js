@@ -1,9 +1,5 @@
-// alert("JS file connected!");
-console.log("JS file connected!");
-
 // create event listener for the button click
 $('#login-form').on('submit', async (e) => {
-
     try {
         // prevent the default behavior of reloading the screen when the submit button was hit
         e.preventDefault();
@@ -13,9 +9,6 @@ $('#login-form').on('submit', async (e) => {
             email: $('#email-login').val(),
             password: $('#password-login').val()
         };
-
-        // data is being stored correctly
-        // console.log(data);
 
         // send the data to our login route to then be processed to see if these match something already in our DB
         const response = await fetch('/api/users/login', {

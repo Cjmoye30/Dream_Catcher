@@ -1,31 +1,29 @@
 {{!-- Homepage --}}
 
-
 {{!-- Homepage container --}}
 <div class="container-fluid homepage-content">
-  <div class="row homepage-row">
-
-    {{!-- Left side --}}
-    <div class="col-md-6 homepage-left">
-      <h1>DreamerGPT</h1>
-      {{!-- This class could potentially be populated from an array of random facts about dreams, where each time
-      soemone logs on, a different fact can be shown --}}
-      <p class="randomDreamFact">"You forget 90% of your dreams..."</p>
-      <div class="d-flex callToAction justify-content-center">
-
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <h1 class="fixed-title">DreamerGPT</h1>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="fact-container">
+        <div class="fact-text-wrapper">
+          <p class="fact-text" id="randomDreamFact">"You forget 90% of your dreams..."</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="d-flex callToAction justify-content-center" style="gap: 40px;">
         <a href="/signup"> <button class="btn signUpButton btn-secondary p-2 m-2">Sign Up</button>
         </a>
         <a href="/login"> <button class="btn loginButton btn-secondary p-2 m-2">Login</button>
         </a>
-
       </div>
     </div>
-
-    {{!-- Right side - insert some kind of image if we can't find a good background image with something cool already --}}
-    <div class="col-md-4 homepage-right">
-      <img src="" alt="placeholder image">
-    </div>
-
   </div>
-
 </div>
