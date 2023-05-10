@@ -24,6 +24,11 @@ Dreams.init(
             type: DataTypes.TEXT,
             allowNull: false,
         },
+        date_created: {
+            type: DataTypes.DATE,
+            allowNull: false,
+            defaultValue: DataTypes.NOW,
+        },
         // Foreign Key - author_id = user.id
         user_id: {
             type: DataTypes.INTEGER,

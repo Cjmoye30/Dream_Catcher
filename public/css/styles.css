@@ -112,8 +112,15 @@ main {
 }
 
 footer {
+    height: 100px;
+    background-color: rgba(199, 100, 236, 0.6);
     bottom: 0;
     color: white;
+    align-items: center;
+}
+
+.footer-text {
+    margin-bottom: 0;
 }
 
 .fact-container {
@@ -184,7 +191,40 @@ footer {
     border: none;
     white-space: nowrap;
 }
+
 .submit-btn:hover {
     transform: scale(0.95);
     background-color: rgba(74, 54, 177, 1);
+}
+
+/* ----------- Dream Feed Page ----------- */
+.previousDreamsFeed {
+    border: 4px solid white;
+    margin: 20px 0;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.creatorDetails {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(199, 100, 236, 0.6);
+    padding: 20px;
+}
+
+.dreamHeader {
+    border-bottom: .1px solid white
+}
+
+.dreamResults {
+    background-color: rgba(74, 54, 177, 0.2);
+
+}
+
+.creatorDetails p {
+    font-size: 1.4rem;
+}
+
+.dreamResults {
+    padding: 20px;
 }
