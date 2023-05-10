@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Dreams } = require('../models') 
+const { Dreams, User } = require('../models');
 
 // GET request for homepage
 router.get('/', async (req, res) => {
@@ -18,7 +18,7 @@ router.get('/signup', async (req, res) => {
 
 // GET request for Journal Page - get all dreams for the signed in user only
 router.get('/journal', async (req, res) => {
-  
+
   try {
     const dreamData = await Dreams.findAll({
       where: {
@@ -33,6 +33,34 @@ router.get('/journal', async (req, res) => {
   } catch (err) {
     res.status(500).json(err)
   }
+});
+
+// GET request for the "dream feed - pulling all dreams in the DB"
+router.get('/feed', async (req, res) => {
+
+  try {
+    const dreamData = await Dreams.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['name']
+        }
+      ]
+    });
+
+    const dreamArr = dreamData.map((dreamData) => dreamData.get({ plain: true }));
+    console.log(dreamArr)
+
+    res.render('dreamFeed', { dreamArr });
+  } catch (err) {
+    res.status(500).json(err)
+  }
+
+});
+
+// GET request for the mission page
+router.get('/missionpage', async (req, res) => {
+  res.render('missionPage');
 });
 
 module.exports = router;

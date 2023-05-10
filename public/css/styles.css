@@ -126,8 +126,15 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 footer {
+    height: 100px;
+    background-color: rgba(199, 100, 236, 0.6);
     bottom: 0;
     color: white;
+    align-items: center;
+}
+
+.footer-text {
+    margin-bottom: 0;
 }
 
 .fact-container {
@@ -204,6 +211,37 @@ footer {
     background-color: rgba(74, 54, 177, 1);
 }
 
+.previousDreamsFeed {
+    border: 4px solid white;
+    margin: 20px 0;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.creatorDetails {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(199, 100, 236, 0.6);
+    padding: 20px;
+}
+
+.dreamHeader {
+    border-bottom: .1px solid white
+}
+
+.dreamResults {
+    background-color: rgba(74, 54, 177, 0.2);
+
+}
+
+.creatorDetails p {
+    font-size: 1.4rem;
+}
+
+.dreamResults {
+    padding: 20px;
+}
+=======
 .journal-reminder {
     display: flex;
     margin-top: 3%;

@@ -1,0 +1,42 @@
+<h1>Dream Feed Page</h1>
+
+<h3>Recent Dreams from our Users:</h3>
+
+<hr>
+
+{{#each dreamArr}}
+<div class="previousDreamsFeed">
+
+    <div class="dreamHeader">
+        <div class="creatorDetails">
+            <p>Dreamer: {{user.name}}</p>
+            <p>Subject: {{subject}}</p>
+            <p>Date: {{format_date date_created}}</p>
+        </div>
+    </div>
+
+    <div class="dreamResults">
+        <p class="dreamDesc"><em>Brief Description: </em>{{description}}</p>
+        <p><em>Interpretation: </em></p>
+        <p>{{interpretation}}</p>
+    </div>
+
+</div>
+
+<hr>
+
+{{/each}}
+
+{{#if session.logged_in}}
+<div>
+    <h3>Track your dreams from your Journal Page</h3>
+    <a href="/journal"><button class=" btn cta-button">Journal</button></a>
+</div>
+
+{{else}}
+<div class="cta">
+    <h3>Login or Signup to begin tracking your dreams</h3>
+    <button class="btn cta-button">Login</button>
+    <button class="btn cta-button">Signup</button>
+</div>
+{{/if}}
