@@ -31,6 +31,16 @@ document.getElementById('interpretBtn').addEventListener('click', async () => {
     const description = document.getElementById('description').value;
     const loadingElement = document.getElementById('loading');
     const interpretationElement = document.getElementById('interpretation');
+
+    // Check if the description is empty
+    if (!description.trim()) {
+        // Set the loading element's text to the message
+        loadingElement.innerText = 'Please enter a dream for DreamerGPT...';
+        loadingElement.style.display = 'block'; // Make sure the message is visible
+        return; // Exit the function early
+    } else {
+        loadingElement.innerText = 'DreamerGPT is thinking...'; // Restore original loading message
+    }
     
     // Show the loading indicator
     loadingElement.style.display = 'block';
@@ -92,5 +102,4 @@ $(".delete-button").on("click", async (e) => {
     } else {
         console.log("Something went wrong")
     }
-
 })

@@ -1,6 +1,6 @@
-
 <div>
     <h3>Welcome, {{session.name}}!</h3>
+    <p class="journal-reminder">Write down your dream before you forget!</p>
 </div>
 
 <div class="row journal-container">
@@ -13,28 +13,29 @@
 
             <div class="form-group">
                 <label for="description">Dream Description:</label>
-                <textarea id="description" name="description" rows="4" cols="50" class="form-control" required></textarea>
+                <textarea id="description" name="description" rows="4" cols="50" class="form-control"
+                    required></textarea>
             </div>
 
             <div class="form-group d-flex">
+                <button id="interpretBtn" class="submit-btn">Interpret Dream</button>
                 <button class="submit-btn" id="submitDreamBtn" type="submit">Submit Journal</button>
-                <button id="interpretBtn" class="submit-btn">Interpret</button>
             </div>
         </form>
 
         <div id="loading" class="dreamer-loading">DreamerGPT is thinking...</div>
         <div id="interpretation"></div>
     </div>
-    
+
     <div class="col col-lg-5 order-2 allDreams">
         <h1><i class="fas fa-star"></i> Your Past Dreams <i class="fas fa-star"></i></h1>
 
         {{#each dreamArr}}
         <div class="previousDreams">
             <h6> {{subject}} </h6>
-            <p>{{description}}</p>
+            <p><i>"{{description}}"</i></p>
             <p>{{interpretation}}</p>
-            
+
             <!-- Wrap the delete button with a div -->
             <div class="delete-button-container">
                 <i id="{{id}}" class='fas fa-trash delete-button'></i>
