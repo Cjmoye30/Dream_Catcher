@@ -32,6 +32,7 @@ document.getElementById('interpretBtn').addEventListener('click', async () => {
     const loadingElement = document.getElementById('loading');
     const interpretationElement = document.getElementById('interpretation');
 
+
     // Check if the description is empty
     if (!description.trim()) {
         // Set the loading element's text to the message
@@ -41,6 +42,7 @@ document.getElementById('interpretBtn').addEventListener('click', async () => {
     } else {
         loadingElement.innerText = 'DreamerGPT is thinking...'; // Restore original loading message
     }
+
     
     // Show the loading indicator
     loadingElement.style.display = 'block';
