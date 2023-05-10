@@ -29,8 +29,22 @@ document.getElementById('dreamForm').addEventListener('submit', (e) => {
 // Add event listener for the "Interpret" button click
 document.getElementById('interpretBtn').addEventListener('click', async () => {
     const description = document.getElementById('description').value;
-    const interpretation = await interpretDream(description);
-    document.getElementById('interpretation').innerHTML = interpretation;
+    const loadingElement = document.getElementById('loading');
+    const interpretationElement = document.getElementById('interpretation');
+    
+    // Show the loading indicator
+    loadingElement.style.display = 'block';
+    interpretationElement.innerHTML = '';
+
+    try {
+        const interpretation = await interpretDream(description);
+        interpretationElement.innerHTML = interpretation;
+    } catch (error) {
+        interpretationElement.innerHTML = 'Error fetching dream interpretation';
+    }
+
+    // Hide the loading indicator
+    loadingElement.style.display = 'none';
 });
 
 // Event listener for dream submit button
