@@ -9,8 +9,26 @@ main {
     color: white
 }
 
-* {
-    /* border: .1px solid white; */
+/* Apply styles to the main scrollbar of the webpage */
+body::-webkit-scrollbar,
+html::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track,
+html::-webkit-scrollbar-track {
+    background: black;
+}
+
+body::-webkit-scrollbar-thumb,
+html::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, rgba(74, 54, 177, 0.5), rgba(199, 100, 236, 0.6));
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover,
+html::-webkit-scrollbar-thumb:hover {
+    background: black;
 }
 
 .homepage-content {
@@ -92,10 +110,6 @@ main {
         background-size: 150% 150%;
     }
 }
-
-
-
-
 
 .space-background {
     position: fixed;
@@ -184,7 +198,112 @@ footer {
     border: none;
     white-space: nowrap;
 }
+
 .submit-btn:hover {
     transform: scale(0.95);
     background-color: rgba(74, 54, 177, 1);
+}
+
+.journal-reminder {
+    display: flex;
+    margin-top: 3%;
+    margin-left: 11%;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.form-group {
+    display: flex;
+    margin-bottom: 5% !important;
+    justify-content: space-between;
+}
+
+.form-group.d-flex {
+    justify-content: center;
+    gap: 150px;
+}
+
+.dreamer-loading {
+    display: none;
+    margin-top: 8%;
+    font-size: 18px;
+    font-family: "Courier";
+    color: #fff;
+}
+
+#interpretation {
+    display: flex !important;
+    margin-top: 4% !important;
+    font-family: "Courier" !important;
+    font-size: 16px !important;
+    color: #fff;
+}
+
+.allDreams {
+    display: block;
+    background-color: rgba(199, 100, 236, 0.1);
+    border-radius: 20px;
+    overflow-y: auto;
+    max-height: 550px;
+}
+
+.allDreams::-webkit-scrollbar {
+    width: 10px;
+}
+
+.allDreams::-webkit-scrollbar-track {
+    background: black;
+}
+
+.allDreams::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, rgba(74, 54, 177, 0.5), rgba(199, 100, 236, 0.6));
+    border-radius: 10px;
+}
+
+.allDreams::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, rgba(74, 54, 177, 0.5), rgba(199, 100, 236, 0.6));
+}
+
+.allDreams h1 {
+    display: flex;
+    justify-content: center;
+    border-bottom: 3px solid white;
+    margin-top: 3%;
+    margin-bottom: 5%;
+    padding-bottom: 5%;
+}
+
+.fas.fa-star {
+    justify-content: space-between;
+    margin-inline: 3%;
+    margin-top: 2.5%;
+    font-size: 20px;
+}
+
+.previousDreams {
+    border-bottom: 3px solid rgba(255, 255, 255, 0.4);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+h6 {
+    font-size: 23px;
+    font-weight: 650;
+}
+
+.delete-button-container {
+    text-align: right;
+    margin-right: 5%;
+}
+
+.delete-button {
+    display: inline-block;
+    margin-bottom: 1.5%;
+    font-size: 16px;
+}
+
+
+.delete-button:hover {
+    cursor: pointer;
+    transform: scale(0.95);
 }
