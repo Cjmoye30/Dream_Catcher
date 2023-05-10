@@ -261,7 +261,7 @@ footer {
     gap: 150px;
 }
 
-.dreamer-loading {
+#loading {
     display: none;
     margin-top: 8%;
     font-size: 18px;
