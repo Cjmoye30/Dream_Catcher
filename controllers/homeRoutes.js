@@ -35,4 +35,9 @@ router.get('/journal', async (req, res) => {
   }
 });
 
+// 
+router.get('/missionpage', async (req, res) => {
+  res.render('missionpage');
+});
+
 module.exports = router;
