@@ -35,6 +35,7 @@ router.get('/journal', async (req, res) => {
   }
 });
 
+
 // GET request for the "dream feed - pulling all dreams in the DB"
 router.get('/feed', async (req, res) => {
 
