@@ -30,7 +30,7 @@ $(".signup-form").on("submit", async (e) => {
 
         if (responseData.success) {
             console.log("redirect to the journal page");
-            window.location.replace('/journal')
+            window.location.replace('/journal');
         } else {
             console.log("Something went wrong! Try again!")
         }

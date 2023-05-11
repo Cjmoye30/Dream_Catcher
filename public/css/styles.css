@@ -9,6 +9,7 @@ main {
     color: white
 }
 
+
 /* Apply styles to the main scrollbar of the webpage */
 body::-webkit-scrollbar,
 html::-webkit-scrollbar {
@@ -126,12 +127,27 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 footer {
+    display: flex;
     height: 100px;
-    background-color: rgba(199, 100, 236, 0.6);
+    background: linear-gradient(360deg, rgba(74, 54, 177, 0.5), rgba(199, 100, 236, 0.6));
     bottom: 0;
     color: white;
     align-items: center;
+    justify-content: center;
 }
+
+.cta-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.cta-button {
+    margin: 20px;
+}
+
 
 .footer-text {
     margin-bottom: 0;
@@ -168,7 +184,8 @@ footer {
 }
 
 .signUpButton,
-.loginButton {
+.loginButton,
+.cta-button {
     border-radius: 5px;
     color: #fff;
     font-size: 17px;
@@ -241,7 +258,7 @@ footer {
 .dreamResults {
     padding: 20px;
 }
-=======
+
 .journal-reminder {
     display: flex;
     margin-top: 3%;
@@ -261,7 +278,7 @@ footer {
     gap: 150px;
 }
 
-.dreamer-loading {
+#loading {
     display: none;
     margin-top: 8%;
     font-size: 18px;
@@ -344,4 +361,24 @@ h6 {
 .delete-button:hover {
     cursor: pointer;
     transform: scale(0.95);
+}
+
+.missionRow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.missionTitle {
+    font-size: 4rem;
+}
+
+.missionDesc {
+    font-size: 1.3rem;
+    line-height: 3rem;
+}
+
+.profilePics {
+    display: flex;
+    justify-content: space-evenly;
 }
