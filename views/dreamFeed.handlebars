@@ -28,15 +28,17 @@
 {{/each}}
 
 {{#if session.logged_in}}
-<div>
+<div class="cta-container">
     <h3>Track your dreams from your Journal Page</h3>
     <a href="/journal"><button class=" btn cta-button">Journal</button></a>
 </div>
 
 {{else}}
-<div class="cta">
+<div class="cta-container">
     <h3>Login or Signup to begin tracking your dreams</h3>
-    <button class="btn cta-button">Login</button>
-    <button class="btn cta-button">Signup</button>
+    <div>
+        <button class="btn cta-button">Login</button>
+        <button class="btn cta-button">Signup</button>
+    </div>
 </div>
 {{/if}}

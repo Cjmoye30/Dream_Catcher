@@ -80,7 +80,6 @@ $("#submitDreamBtn").on("click", async (e) => {
     // If the response is good, show confirmation and log the dream
     const responseData = await response.json();
     if (responseData.success) {
-        alert("Your dream has been logged - we can replace this with something better - maybe a modal as a confirmation");
         // reload the page to display the new dream on the page
         window.location.reload()
     } else {
