@@ -19,6 +19,7 @@ router.post('/api/interpret-dream', async (req, res) => {
     }
 });
 
+
 // Add a dream to the DB
 router.post('/api/submit-dream', async (req, res) => {
 
