@@ -61,7 +61,7 @@ router.get('/feed', async (req, res) => {
 
 // GET request for the mission page
 router.get('/missionpage', async (req, res) => {
-  res.render('missionPage');
+  res.render('mission');
 });
 
 module.exports = router;
