@@ -1,5 +1,7 @@
 # DreamerGPT
 
+<img width="961" alt="2023-05-19" src="https://github.com/Cjmoye30/Dream_Catcher/assets/131714206/238d4d1a-0ffd-4a90-b778-2ef5bd10730e">
+
 "Our mission is to provide a comprehensive and insightful platform for individuals to explore and understand their dreams. Through the use of expert analysis and guidance, we aim to empower our users with the knowledge and tools needed to unlock the hidden meanings and symbolism within their dreams, allowing them to gain a deeper understanding of their subconscious mind and facilitate personal growth and development."
 
 ## User Story
